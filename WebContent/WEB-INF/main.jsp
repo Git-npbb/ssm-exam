@@ -58,7 +58,6 @@
 			<th>email</th>
 			<th>esalary</th>
 			<th>esalary</th>
-			
 			<th>esalary</th>
 		</tr>	
 	

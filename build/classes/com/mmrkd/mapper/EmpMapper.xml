@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ <!-- namespace指定和哪个Mapper映射器接口对应 -->
+<mapper namespace="com.mmrkd.mapper.EmpDao">
+	<!-- 定义SQL语句 -->
+
+    <select id="getEmp" parameterType="com.mmrkd.bean.Emp"
+    resultType="com.mmrkd.bean.Emp">
+    	select * from emp where eno = #{eno} and epassword = #{epassword}
+    </select>
+    
+    <select id="findAll" resultType="com.mmrkd.bean.Emp">
+    		select * from emp
+    </select>
+   
+   	<insert id="insertEmp" parameterType="com.mmrkd.bean.Emp">
+		INSERT INTO emp ( eno, epassword, eage, email, esalary) VALUES (#{eno}, #{epassword}, #{eage}, #{email}, #{esalary}); 	
+   	</insert>
+   	
+</mapper>
